@@ -97,10 +97,10 @@ export default function HeroSection() {
             the possibilities and potential of digital engagements.
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition cursor-pointer">
               Get Started
             </button>
-            <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-lg border border-blue-600 hover:bg-blue-50 transition">
+            <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-lg border border-blue-600 hover:bg-blue-50 transition cursor-pointer">
               ▶ Play Video
             </button>
           </div>
@@ -128,7 +128,7 @@ export default function HeroSection() {
 
           {/* Image navigation buttons */}
           <button
-            className="absolute left-4 bg-white/70 rounded-full p-2 hover:bg-white shadow"
+            className="absolute left-4 bg-white/70 rounded-full p-2 hover:bg-white shadow cursor-pointer"
             onClick={() =>
               setCurrent((prev) => (prev - 1 + images.length) % images.length)
             }
@@ -136,7 +136,7 @@ export default function HeroSection() {
             ◀
           </button>
           <button
-            className="absolute right-4 bg-white/70 rounded-full p-2 hover:bg-white shadow"
+            className="absolute right-4 bg-white/70 rounded-full p-2 hover:bg-white shadow cursor-pointer"
             onClick={() => setCurrent((prev) => (prev + 1) % images.length)}
           >
             ▶
