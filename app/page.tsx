@@ -4,6 +4,7 @@ import HeroSection from "./components/hero/hero";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import DigitalMarketingSection from "./components/DigitalMarketingSection/DigitalMarketingSection";
 import WebDesignSection from "./components/WebDesignSection/WebDesignSection";
+import CloudStorageSection from "./components/CloudStorageSection/CloudStorageSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ServicesSection />
       <DigitalMarketingSection />
       <WebDesignSection />
+      <CloudStorageSection />
     </>
   );
 }
