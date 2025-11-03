@@ -10,6 +10,7 @@ import LatestWorkSection from "./components/LatestWorkSection/LatestWorkSection"
 import StatsSection from "./components/StatsSection/StatsSection";
 import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
 import PricingSection from "./components/PricingSection/PricingSection";
+import LatestNewsSection from "./components/LatestNewsSection/LatestNewsSection";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <StatsSection />
       <TestimonialsSection />
       <PricingSection />
+      <LatestNewsSection />
     </>
   );
 }
