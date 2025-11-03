@@ -7,6 +7,7 @@ import WebDesignSection from "./components/WebDesignSection/WebDesignSection";
 import CloudStorageSection from "./components/CloudStorageSection/CloudStorageSection";
 import SEOSection from "./components/SEOSection/SEOSection";
 import LatestWorkSection from "./components/LatestWorkSection/LatestWorkSection";
+import StatsSection from "./components/StatsSection/StatsSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <CloudStorageSection />
       <SEOSection />
       <LatestWorkSection />
+      <StatsSection />
     </>
   );
 }
