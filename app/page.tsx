@@ -11,11 +11,13 @@ import StatsSection from "./components/StatsSection/StatsSection";
 import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
 import PricingSection from "./components/PricingSection/PricingSection";
 import LatestNewsSection from "./components/LatestNewsSection/LatestNewsSection";
+import ContactForm from "./components/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <ServicesSection />
       <DigitalMarketingSection />
@@ -27,6 +29,8 @@ export default function Home() {
       <TestimonialsSection />
       <PricingSection />
       <LatestNewsSection />
+      <ContactForm />
+      {/* <Footer /> */}
     </>
   );
 }
