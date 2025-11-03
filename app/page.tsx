@@ -8,6 +8,7 @@ import CloudStorageSection from "./components/CloudStorageSection/CloudStorageSe
 import SEOSection from "./components/SEOSection/SEOSection";
 import LatestWorkSection from "./components/LatestWorkSection/LatestWorkSection";
 import StatsSection from "./components/StatsSection/StatsSection";
+import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <SEOSection />
       <LatestWorkSection />
       <StatsSection />
+      <TestimonialsSection />
     </>
   );
 }
