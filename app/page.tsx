@@ -17,6 +17,8 @@ import AISolutionSection from "./components/AISolutionSection/AISolutionSection"
 import ResearchAndReportingSection from "./components/ResearchAndReportingSection/ResearchAndReportingSection";
 import SoftwareAndSaasSection from "./components/SoftwareAndSaasSection/SoftwareAndSaasSection";
 import DigitalMarketingSection from "./components/DigitalMarketingSection/DigitalMarketingSection";
+import WhyUsSection from "./components/WhyUsSection/WhyUsSection";
+import OurProcessSection from "./components/OurProcessSection/OurProcessSection";
 
 export default function Home() {
   return (
@@ -32,6 +34,8 @@ export default function Home() {
       <DigitalMarketingSection />
       {/* <SEOSection />
       <CloudStorageSection /> */}
+      <WhyUsSection />
+      <OurProcessSection />
       <LatestWorkSection />
       <StatsSection />
       <TestimonialsSection />

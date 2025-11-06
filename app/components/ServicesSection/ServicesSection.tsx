@@ -1,6 +1,13 @@
 "use client";
+
 import { motion } from "framer-motion";
-import { Laptop, Smartphone, Megaphone, ShoppingCart, MessageSquare, Settings } from "lucide-react";
+import {
+  Laptop,
+  Smartphone,
+  Megaphone,
+  ShoppingCart,
+  Settings,
+} from "lucide-react";
 
 interface Service {
   title: string;
@@ -11,35 +18,55 @@ interface Service {
 const services: Service[] = [
   {
     title: "Website Design & Development",
-    description: " We build modern, responsive, and high-performing websites that elevate your brand presence. ",
+    description:
+      "We build modern, responsive, and high-performing websites that elevate your brand presence.",
     icon: Laptop,
   },
   {
     title: "Software & SaaS Development",
-    description: " Custom-built software and SaaS solutions designed for scalability, security, and growth. ",
+    description:
+      "Custom-built software and SaaS solutions designed for scalability, security, and growth.",
     icon: Laptop,
   },
   {
     title: "Data and Analytics Solution",
-    description: " Transform your data into insights with powerful analytics and visualization tools. ",
+    description:
+      "Transform your data into insights with powerful analytics and visualization tools.",
     icon: Megaphone,
   },
   {
     title: "AI Solutions",
-    description: "Intelligent AI models that automate, predict, and optimize business performance.",
+    description:
+      "Intelligent AI models that automate, predict, and optimize business performance.",
     icon: Smartphone,
   },
   {
     title: "Research & Reporting",
-    description: "Actionable research and reports that guide strategic, data-driven decisions. ",
+    description:
+      "Actionable research and reports that guide strategic, data-driven decisions.",
     icon: ShoppingCart,
   },
-    {
+  {
     title: "Digital Marketing",
-    description: "Creative, data-backed marketing strategies that boost reach and engagement.",
+    description:
+      "Creative, data-backed marketing strategies that boost reach and engagement.",
     icon: Settings,
   },
 ];
+
+// ✅ Fixed card variants with smooth scroll animation
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      delay: i * 0.15,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  }),
+};
 
 export default function ServicesSection() {
   return (
@@ -53,9 +80,12 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Our Services
+          </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            We deliver creative, high-quality, and reliable technology services for your business success.
+            We deliver creative, high-quality, and reliable technology services
+            for your business success.
           </p>
         </motion.div>
 
@@ -64,9 +94,10 @@ export default function ServicesSection() {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              custom={i}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               className="group relative bg-white rounded-2xl shadow-md p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl overflow-hidden"
