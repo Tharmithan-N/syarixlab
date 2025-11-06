@@ -10,33 +10,33 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: "IT Consultancy",
-    description: "We provide expert advice to improve your IT systems and digital transformation.",
-    icon: MessageSquare,
-  },
-  {
-    title: "Web Development",
-    description: "Modern, responsive, and high-performing web solutions for your business.",
+    title: "Website Design & Development",
+    description: " We build modern, responsive, and high-performing websites that elevate your brand presence. ",
     icon: Laptop,
   },
   {
-    title: "Digital Marketing",
-    description: "Boost your brand visibility with our tailored digital marketing strategies.",
+    title: "Software & SaaS Development",
+    description: " Custom-built software and SaaS solutions designed for scalability, security, and growth. ",
+    icon: Laptop,
+  },
+  {
+    title: "Data and Analytics Solution",
+    description: " Transform your data into insights with powerful analytics and visualization tools. ",
     icon: Megaphone,
   },
   {
-    title: "Mobile App Development",
-    description: "Build scalable and user-friendly mobile apps for Android and iOS platforms.",
+    title: "AI Solutions",
+    description: "Intelligent AI models that automate, predict, and optimize business performance.",
     icon: Smartphone,
   },
   {
-    title: "eCommerce Development",
-    description: "Launch your online store with seamless checkout and stunning UI/UX design.",
+    title: "Research & Reporting",
+    description: "Actionable research and reports that guide strategic, data-driven decisions. ",
     icon: ShoppingCart,
   },
     {
-    title: "IT Solutions",
-    description: "End-to-end IT solutions that streamline operations and enhance productivity.",
+    title: "Digital Marketing",
+    description: "Creative, data-backed marketing strategies that boost reach and engagement.",
     icon: Settings,
   },
 ];

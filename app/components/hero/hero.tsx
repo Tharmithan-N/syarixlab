@@ -90,11 +90,11 @@ export default function HeroSection() {
         {/* Left text */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Secure IT Solutions <br /> for a More Secure Environment!
+            Engineering Excellence through Intelligent Solutions.
           </h1>
           <p className="text-gray-600 mb-8">
-            We work hand-in-hand with industry-leading brands to help redefine
-            the possibilities and potential of digital engagements.
+            We work hand-in-hand with organizations to create digital solutions that drive growth, security, and 
+innovation.
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition cursor-pointer">

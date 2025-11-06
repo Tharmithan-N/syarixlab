@@ -4,12 +4,11 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
 const features = [
-  "SEO Marketing",
-  "Email Marketing",
-  "Facebook Marketing",
-  "Data Scraping",
-  "Social Marketing",
-  "Youtube Marketing",
+  "Search Engine Optimization (SEO)",
+  "Social Media Marketing (SMM)",
+  "Pay-Per-Click (PPC) Advertising",
+  "Content Creation & Campaign Strategy",
+  "Web & Social Analytics",
 ];
 
 export default function DigitalMarketingSection() {

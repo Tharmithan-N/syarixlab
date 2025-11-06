@@ -4,16 +4,16 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
 const features = [
-  "Custom Website Design",
-  "Front-End & Back-End Development ",
-  "E-Commerce Website Development",
-  "CMS Integration (WordPress, Headless CMS)",
-  "UI/UX Design & Wireframing",
-  "Website Maintenance & Optimization",
-  "SEO & Performance Enhancement"
+  "Data Warehousing & ETL Pipelines",
+  "Data Integration (Azure, AWS, GCP)",
+  "Real-Time Data Streaming (Kafka, Spark)",
+  "Business Intelligence Dashboards (Power BI, Tableau)",
+  "Data Governance & Quality Assurance",
+  "Advanced Reporting & KPI Tracking",
+  "Cloud Data Architecture Design"
 ];
 
-export default function WebDesignSection() {
+export default function DataAndAnalyticSection() {
   return (
     <section className="bg-white py-20" id="web-design">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
@@ -46,7 +46,7 @@ export default function WebDesignSection() {
           className="space-y-6"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Website Design & Development 
+            Data and Analytics Solution 
           </h2>
           <p className="text-gray-500 leading-relaxed max-w-lg">
             We believe brand interaction is key to communication. Real

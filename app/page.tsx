@@ -2,7 +2,6 @@ import Image from "next/image";
 import Navbar from "./components/navbar/Navbar";
 import HeroSection from "./components/hero/hero";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
-import DigitalMarketingSection from "./components/DigitalMarketingSection/DigitalMarketingSection";
 import WebDesignSection from "./components/WebDesignSection/WebDesignSection";
 import CloudStorageSection from "./components/CloudStorageSection/CloudStorageSection";
 import SEOSection from "./components/SEOSection/SEOSection";
@@ -13,6 +12,11 @@ import PricingSection from "./components/PricingSection/PricingSection";
 import LatestNewsSection from "./components/LatestNewsSection/LatestNewsSection";
 import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
+import DataAndAnalyticSection from "./components/DataAndAnalyticSection/dataandanalyticsSection";
+import AISolutionSection from "./components/AISolutionSection/AISolutionSection";
+import ResearchAndReportingSection from "./components/ResearchAndReportingSection/ResearchAndReportingSection";
+import SoftwareAndSaasSection from "./components/SoftwareAndSaasSection/SoftwareAndSaasSection";
+import DigitalMarketingSection from "./components/DigitalMarketingSection/DigitalMarketingSection";
 
 export default function Home() {
   return (
@@ -20,10 +24,14 @@ export default function Home() {
       {/* <Navbar /> */}
       <HeroSection />
       <ServicesSection />
-      <DigitalMarketingSection />
       <WebDesignSection />
-      <CloudStorageSection />
-      <SEOSection />
+      <SoftwareAndSaasSection />
+      <DataAndAnalyticSection />
+      <AISolutionSection />
+      <ResearchAndReportingSection />
+      <DigitalMarketingSection />
+      {/* <SEOSection />
+      <CloudStorageSection /> */}
       <LatestWorkSection />
       <StatsSection />
       <TestimonialsSection />
