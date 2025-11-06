@@ -26,12 +26,12 @@ export default function Home() {
       {/* <Navbar /> */}
       <HeroSection id="home"/>
       <ServicesSection id="our_services"/>
-      <WebDesignSection />
-      <SoftwareAndSaasSection />
-      <DataAndAnalyticSection />
-      <AISolutionSection />
-      <ResearchAndReportingSection />
-      <DigitalMarketingSection />
+      <WebDesignSection id="webdesign"/>
+      <SoftwareAndSaasSection id="software"/>
+      <DataAndAnalyticSection id="data"/>
+      <AISolutionSection id="ai"/>
+      <ResearchAndReportingSection id="research"/>
+      <DigitalMarketingSection id="marketing"/>
       {/* <SEOSection />
       <CloudStorageSection /> */}
       <WhyUsSection id="why_us"/>

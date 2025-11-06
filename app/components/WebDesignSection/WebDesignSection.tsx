@@ -13,9 +13,9 @@ const features = [
   "SEO & Performance Enhancement"
 ];
 
-export default function WebDesignSection() {
+export default function WebDesignSection({id}: {id?: string}) {
   return (
-    <section className="bg-white py-20" id="web-design">
+    <section className="bg-white py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         {/* LEFT IMAGE / ILLUSTRATION */}
         <motion.div

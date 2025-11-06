@@ -13,9 +13,9 @@ const features = [
   "Model Training & Deployment "
 ];
 
-export default function AISolutionSection() {
+export default function AISolutionSection({id}: {id?: string}) {
   return (
-    <section className="bg-[#fafaff] py-20" id="digital-marketing">
+    <section className="bg-[#fafaff] py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         {/* LEFT CONTENT */}
         <motion.div
