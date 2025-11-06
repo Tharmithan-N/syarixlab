@@ -24,8 +24,8 @@ export default function Home() {
   return (
     <>
       {/* <Navbar /> */}
-      <HeroSection />
-      <ServicesSection />
+      <HeroSection id="home"/>
+      <ServicesSection id="our_services"/>
       <WebDesignSection />
       <SoftwareAndSaasSection />
       <DataAndAnalyticSection />
@@ -34,14 +34,14 @@ export default function Home() {
       <DigitalMarketingSection />
       {/* <SEOSection />
       <CloudStorageSection /> */}
-      <WhyUsSection />
-      <OurProcessSection />
-      <LatestWorkSection />
+      <WhyUsSection id="why_us"/>
+      <OurProcessSection id="our_process"/>
+      <LatestWorkSection id="latest_works"/>
       {/* <StatsSection /> */}
       <TestimonialsSection />
-      <PricingSection />
+      <PricingSection id="pricing"/>
       <LatestNewsSection />
-      <ContactForm />
+      <ContactForm id="contact_us"/>
       {/* <Footer /> */}
     </>
   );

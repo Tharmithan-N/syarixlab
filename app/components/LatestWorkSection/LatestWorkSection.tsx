@@ -30,9 +30,9 @@ const projects = [
   },
 ];
 
-export default function LatestWorkSection() {
+export default function LatestWorkSection({id}: {id?: string}) {
   return (
-    <section className="bg-white py-20" id="latest-work">
+    <section className="bg-white py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2

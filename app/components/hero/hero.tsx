@@ -22,7 +22,7 @@ const shapes = [
   { type: "rect", color: "text-blue-500" },
 ];
 
-export default function HeroSection() {
+export default function HeroSection({ id }: { id?: string }) {
   const [current, setCurrent] = useState(0);
   const controls = useAnimation();
 
@@ -52,7 +52,7 @@ export default function HeroSection() {
   }, [controls]);
 
   return (
-    <section className="relative overflow-hidden pt-32 pb-16 bg-gray-50">
+    <section className="relative overflow-hidden pt-32 pb-16 bg-gray-50" id={id}>
       {/* Floating SVG background elements */}
       {shapes.map((shape, i) => (
         <motion.svg

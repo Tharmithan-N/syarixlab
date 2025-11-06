@@ -48,9 +48,9 @@ const processSteps: ProcessStep[] = [
   },
 ];
 
-export default function OurProcessSection() {
+export default function OurProcessSection({id}: {id?: string}) {
   return (
-    <section className="bg-[#f9f9ff] py-20" id="process">
+    <section className="bg-[#f9f9ff] py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Header */}
         <motion.div

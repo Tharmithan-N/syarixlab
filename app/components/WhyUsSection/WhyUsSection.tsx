@@ -36,9 +36,9 @@ const reasons = [
   },
 ];
 
-export default function WhyUsSection() {
+export default function WhyUsSection({id}: {id?: string}) {
   return (
-    <section className="bg-gradient-to-br from-white via-gray-50 to-blue-50 py-20">
+    <section className="bg-gradient-to-br from-white via-gray-50 to-blue-50 py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">

@@ -45,9 +45,9 @@ const plans = [
   },
 ];
 
-export default function PricingSection() {
+export default function PricingSection({id}: {id?: string}) {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2

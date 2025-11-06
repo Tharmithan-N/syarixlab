@@ -60,9 +60,9 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function ServicesSection() {
+export default function ServicesSection({id}: {id?: string}) {
   return (
-    <section className="bg-[#f9f9ff] py-20" id="services">
+    <section className="bg-[#f9f9ff] py-20" id={id}>
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Section Header */}
         <motion.div

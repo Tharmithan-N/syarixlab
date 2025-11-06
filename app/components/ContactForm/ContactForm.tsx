@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({id}: {id?: string}) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +24,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-20" id={id}>
       <div className="max-w-4xl mx-auto px-6">
         {/* Heading */}
         <motion.h2
