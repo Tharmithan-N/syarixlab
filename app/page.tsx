@@ -37,7 +37,7 @@ export default function Home() {
       <WhyUsSection />
       <OurProcessSection />
       <LatestWorkSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <TestimonialsSection />
       <PricingSection />
       <LatestNewsSection />
