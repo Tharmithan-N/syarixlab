@@ -74,15 +74,15 @@ export default function OurProcessSection() {
           {processSteps.map((step, i) => (
             <motion.div
               key={step.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: i * 0.1,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
+              initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 10px 30px rgba(37, 99, 235, 0.25)",
+                  transition: { duration: 0.4, ease: "easeOut" },
+                }}
               className="bg-white rounded-2xl shadow-md p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl"
             >
               <div className="flex flex-col items-center text-center">

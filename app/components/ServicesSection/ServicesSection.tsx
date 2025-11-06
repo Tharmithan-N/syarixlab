@@ -54,18 +54,10 @@ const services: Service[] = [
   },
 ];
 
-// ✅ Fixed card variants with smooth scroll animation
+// ✅ TypeScript-safe animation setup
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: (i: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      delay: i * 0.15,
-      ease: [0.25, 0.1, 0.25, 1],
-    },
-  }),
+  visible: { opacity: 1, y: 0 },
 };
 
 export default function ServicesSection() {
@@ -94,41 +86,33 @@ export default function ServicesSection() {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              custom={i}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
+              transition={{
+                duration: 0.6,
+                delay: i * 0.15,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               className="group relative bg-white rounded-2xl shadow-md p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl overflow-hidden"
             >
-              {/* Hover gradient background */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-blue-600 to-indigo-500 transition-opacity duration-500" />
-
-              {/* Content */}
+              {/* ✅ Removed blue hover overlay — shadow only */}
               <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 group-hover:bg-white transition-colors duration-500">
+                <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 transition-colors duration-500 group-hover:shadow-lg">
                   <service.icon
                     size={32}
-                    className="text-blue-600 group-hover:text-blue-700 transition-all duration-500"
+                    className="text-blue-600 transition-all duration-500"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white transition-colors duration-500">
+                <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-500">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 group-hover:text-gray-200 mt-3 text-sm leading-relaxed transition-colors duration-500">
+                <p className="text-gray-500 mt-3 text-sm leading-relaxed transition-colors duration-500">
                   {service.description}
                 </p>
               </div>
-
-              {/* Border animation */}
-              <motion.div
-                className="absolute inset-0 border-2 border-transparent rounded-2xl"
-                whileHover={{
-                  borderColor: "rgba(59,130,246,0.6)",
-                  transition: { duration: 0.5 },
-                }}
-              />
             </motion.div>
           ))}
         </div>
