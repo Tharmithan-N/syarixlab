@@ -62,7 +62,7 @@ export default function ChatBox() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="mb-4 relative flex items-center justify-center h-12 w-12 bg-blue-600 rounded-full shadow-lg text-white text-2xl cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+        className="mb-4 relative flex items-center justify-center h-12 w-12 bg-[#47919F] rounded-full shadow-lg text-white text-2xl cursor-pointer hover:shadow-2xl transition-shadow duration-300"
       >
         <FaComments />
       </motion.button>

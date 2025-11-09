@@ -14,7 +14,7 @@
 //   title: string;
 //   description: string;
 //   icon: React.ElementType;
-//   targetId: string; // 👈 add this
+//   targetId: string;
 // }
 
 // const services: Service[] = [
@@ -75,14 +75,14 @@
 //   const scrollToSection = (sectionId: string) => {
 //     const section = document.getElementById(sectionId);
 //     if (section) {
-//       const offset = 80; // adjust based on navbar height
+//       const offset = 80;
 //       const top = section.offsetTop - offset;
 //       window.scrollTo({ top, behavior: "smooth" });
 //     }
 //   };
 
 //   return (
-//     <section className="bg-[#f9f9ff] py-20" id={id}>
+//     <section className="bg-gray-50 py-20" id={id}>
 //       <div className="max-w-7xl mx-auto px-6 text-center">
 //         {/* Section Header */}
 //         <motion.div
@@ -117,13 +117,13 @@
 //               viewport={{ once: true }}
 //               whileHover={{ scale: 1.05 }}
 //               className="group relative bg-white rounded-2xl shadow-md p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl overflow-hidden"
-//               onClick={() => scrollToSection(service.targetId)} // 👈 smooth scroll trigger
+//               onClick={() => scrollToSection(service.targetId)}
 //             >
 //               <div className="relative z-10 flex flex-col items-center text-center">
-//                 <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 transition-colors duration-500 group-hover:shadow-lg">
+//                 <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-[#47919F] to-[#3C7E8A] group-hover:shadow-lg transition-all duration-500">
 //                   <service.icon
 //                     size={32}
-//                     className="text-blue-600 transition-all duration-500"
+//                     className="text-white transition-all duration-500 group-hover:scale-110"
 //                   />
 //                 </div>
 //                 <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-500">
@@ -133,6 +133,18 @@
 //                   {service.description}
 //                 </p>
 //               </div>
+
+//               {/* Decorative floating circles */}
+//               <motion.div
+//                 className="absolute w-24 h-24 bg-[#47919F]/10 rounded-full -top-6 -left-6 z-0"
+//                 animate={{ rotate: 360 }}
+//                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+//               />
+//               <motion.div
+//                 className="absolute w-16 h-16 bg-[#3C7E8A]/10 rounded-full -bottom-6 -right-6 z-0"
+//                 animate={{ rotate: -360 }}
+//                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+//               />
 //             </motion.div>
 //           ))}
 //         </div>
@@ -259,8 +271,12 @@ export default function ServicesSection({ id }: { id?: string }) {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="group relative bg-white rounded-2xl shadow-md p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl overflow-hidden"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 15px 35px rgba(71, 145, 159, 0.25)",
+                transition: { duration: 0.4, ease: "easeOut" },
+              }}
+              className="group relative bg-white rounded-2xl p-8 cursor-pointer transition-transform duration-500 ease-out overflow-hidden"
               onClick={() => scrollToSection(service.targetId)}
             >
               <div className="relative z-10 flex flex-col items-center text-center">

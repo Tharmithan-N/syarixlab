@@ -166,6 +166,7 @@ export default function WhyUsSection({ id }: { id?: string }) {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {reason.description}
                 </p>
+                
               </motion.div>
             );
           })}
