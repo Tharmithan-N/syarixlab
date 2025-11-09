@@ -74,7 +74,7 @@ export default function Navbar() {
               onClick={() => scrollToSection(item.id)}
             >
               {item.label}
-              <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#47919F] transition-all duration-300 group-hover:w-full" />
             </motion.li>
           ))}
         </ul>
@@ -113,7 +113,7 @@ export default function Navbar() {
             >
               {/* Close Button */}
               <button
-                className="absolute top-6 right-6 text-gray-700 hover:text-blue-600 transition z-[110]"
+                className="absolute top-6 right-6 text-gray-700 hover:text-[#47919F] transition z-[110]"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close menu"
               >
@@ -127,7 +127,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ scale: 1.1 }}
-                  className="text-lg font-medium text-gray-700 hover:text-blue-600 transition cursor-pointer"
+                  className="text-lg font-medium text-gray-700 hover:text-[#47919F] transition cursor-pointer"
                   onClick={() => scrollToSection(item.id)}
                 >
                   {item.label}
