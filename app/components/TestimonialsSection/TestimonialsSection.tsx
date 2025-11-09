@@ -1,6 +1,6 @@
 // "use client";
 
-// import { useState } from "react";
+// import { useState, useEffect } from "react";
 // import { motion } from "framer-motion";
 // import Image from "next/image";
 // import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -40,14 +40,27 @@
 //     position: "Small Shop Owner",
 //     image: "/testimonials/user1.jpg",
 //   },
-//   // Add more testimonials as needed
 // ];
 
 // export default function TestimonialsSection() {
 //   const [currentIndex, setCurrentIndex] = useState(0);
+//   const [visibleCards, setVisibleCards] = useState(4);
 
-//   const visibleCards = 4; // desktop
 //   const totalCards = testimonials.length;
+
+//   // Update visible cards based on window width
+//   useEffect(() => {
+//     const updateVisibleCards = () => {
+//       const width = window.innerWidth;
+//       if (width < 640) setVisibleCards(1); // mobile
+//       else if (width < 1024) setVisibleCards(2); // tablet
+//       else setVisibleCards(4); // desktop
+//     };
+
+//     updateVisibleCards();
+//     window.addEventListener("resize", updateVisibleCards);
+//     return () => window.removeEventListener("resize", updateVisibleCards);
+//   }, []);
 
 //   const next = () => {
 //     setCurrentIndex((prev) =>
@@ -86,17 +99,18 @@
 
 //         {/* Carousel */}
 //         <div className="relative">
-//           {/* Cards container */}
 //           <div className="overflow-hidden">
 //             <motion.div
-//               animate={{ x: `-${currentIndex * (100 / visibleCards)}%` }}
+//               animate={{
+//                 x: `-${(currentIndex * 100) / visibleCards}%`,
+//               }}
 //               transition={{ type: "spring", stiffness: 100, damping: 20 }}
 //               className="flex gap-6 py-7"
 //             >
 //               {testimonials.map((t, idx) => (
 //                 <div
 //                   key={idx}
-//                   className="flex-shrink-0 w-full sm:w-[80%] md:w-[calc(25%-1.5rem)] bg-white shadow-lg rounded-2xl p-6 text-center"
+//                   className={`flex-shrink-0 w-full sm:w-[80%] md:w-[calc(25%-1.5rem)] bg-white shadow-lg rounded-2xl p-6 text-center`}
 //                 >
 //                   <p className="text-gray-600 mb-4">"{t.quote}"</p>
 //                   <div className="flex flex-col items-center">
@@ -212,14 +226,14 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#fafaff]">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Small heading */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-blue-600 text-sm font-semibold mb-2"
+          className="text-[#47919F] text-sm font-semibold mb-2"
         >
           TESTIMONIALS
         </motion.p>
@@ -247,7 +261,7 @@ export default function TestimonialsSection() {
               {testimonials.map((t, idx) => (
                 <div
                   key={idx}
-                  className={`flex-shrink-0 w-full sm:w-[80%] md:w-[calc(25%-1.5rem)] bg-white shadow-lg rounded-2xl p-6 text-center`}
+                  className={`flex-shrink-0 w-full sm:w-[80%] md:w-[calc(25%-1.5rem)] bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-500 cursor-pointer`}
                 >
                   <p className="text-gray-600 mb-4">"{t.quote}"</p>
                   <div className="flex flex-col items-center">
@@ -269,15 +283,15 @@ export default function TestimonialsSection() {
           {/* Arrows */}
           <button
             onClick={prev}
-            className="absolute top-1/2 left-0 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-gray-100 transition"
+            className="absolute top-1/2 left-0 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-[#47919F]/10 transition"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 text-[#47919F]" />
           </button>
           <button
             onClick={next}
-            className="absolute top-1/2 right-0 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-gray-100 transition"
+            className="absolute top-1/2 right-0 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-[#47919F]/10 transition"
           >
-            <ChevronRight className="w-5 h-5 text-gray-700" />
+            <ChevronRight className="w-5 h-5 text-[#47919F]" />
           </button>
         </div>
       </div>

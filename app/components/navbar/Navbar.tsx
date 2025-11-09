@@ -44,7 +44,7 @@ export default function Navbar() {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 ">
         {/* Logo */}
 <div
   className="flex items-center cursor-pointer"
